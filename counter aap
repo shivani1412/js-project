@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1>Counter App</h1>
+  <p class="counter">0</p>
+  <button id="increment">increment</button>
+  <button id="reset">reset</button>
+  <button id="decrement">decrement</button>
+    
+    <script src="script.js"></script>
+</body>
+</htm>
+-----css----
+body{
+    text-align: center;
+}
+#increment{
+    background-color: cornflowerblue;
+    border-radius: 10px;
+}
+#decrement{
+    background-color: rosybrown;
+    border-radius: 10px;
+}
+#reset{
+    background-color: aquamarine;
+    border-radius: 10px;
+}
+p{
+    font-size: 50px;
+}
+-----js------
+var value = 0;
+const dispaly = document.querySelector('.counter');
+const incrementbtn = document.querySelector('#increment');
+incrementbtn.addEventListener('click',incrementaion);
+
+function incrementaion(){
+  value = value+1;
+  dispaly.textContent = value;
+}
+const decrementbtn = document.querySelector('#decrement') ;
+decrementbtn.addEventListener('click',decrementation);
+function decrementation(){
+    value = value-1;
+    dispaly.textContent = value;
+
+}
+const resetbtn = document.querySelector('#reset');
+resetbtn.addEventListener('click',resetBtn);
+
+function resetBtn(){
+    value = 0;
+    dispaly.textContent = value;
+}
