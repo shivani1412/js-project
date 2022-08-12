@@ -1,1 +1,34 @@
+//create a dark and light theme
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+   
+</head>
+<body>
+    <p>Create a toggle button to change the theme</p>
+    <button onclick="changetheme()">toggle button</button>
+    
+    
+</body>
+<script src="script.js"></script>
 
+</html>
+-----css-------
+body{
+    background-color: white;
+    color: black;
+}
+.darkmode{
+    background-color: black;
+    color: white;
+}
+-----javascript----
+function changetheme(){
+    var element = document.body;
+    element.classList.toggle("darkmode");
+}
