@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky menu</title>
+    <style>
+    body{
+      margin: 0px;
+    }
+    #header{
+      text-align: center;
+    }
+    #logo{
+      width: 250px;
+      height: auto;
+    }
+    #menu{
+      text-align: center;
+      background-color: cadetblue;
+    }
+    #menu li{
+      display: inline-block;
+      padding: 15px 10px;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+   }
+   #container{
+   text-align: center;
+   padding: 50px 100px;
+   }
+ #about{
+   width: 100% ;
+   height: 600px;
+   margin: auto;
+ }
+ .sticky{
+   position: fixed;
+   top: 0;
+   width: 100%;
+ }
+    </style>
+</head>
+<body>
+   <div id="header">
+      <img src="https://cdn.dribbble.com/userupload/3066711/file/original-f85b6179125a8d8a32a77023b8ddd16c.jpg?resize=400x0" alt="logo">
+   </div>
+   <nav id="menu">
+      <li>home</li>
+      <li>About us</li>
+      <li>our team</li>
+      <li>contact us</li>
+   </nav>
+   <div id="container">
+      <h1>About us</h1>
+   <img id="about" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBBlNAk987xTR8Ax9wWXHcggyuyzEEWrm7w2wpb7qi&s" alt="img">
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, explicabo. Vero ad modi dolor tempore ducimus debitis, dicta doloremque minima aspernatur numquam ipsam quisquam ipsum placeat iure maiores aliquid, dolores harum rerum sequi architecto saepe. Amet, mollitia! Nobis, minima adipisci. Veniam, qui ipsum quae eius minima distinctio consequatur harum. Officia labore odio maiores, doloremque eaque quae exercitationem deleniti aliquid voluptas dolorum molestiae ipsa consequatur beatae tempore ex voluptates laboriosam facilis aut vel at quibusdam ut nisi! Modi fugit quibusdam ratione. Illum aut suscipit assumenda quos accusantium veniam ab cumque, repudiandae, quaerat voluptate ipsam cupiditate! Sint adipisci similique nisi blanditiis at odio quia cumque ad optio quae omnis molestias, soluta veritatis exercitationem magnam perferendis perspiciatis iste atque beatae fugiat sit est suscipit? A, odio. Maiores, quas quo impedit voluptate repellendus repudiandae eligendi ullam eveniet cupiditate aliquid ea inventore. Expedita a quo quae et temporibus fugit consectetur suscipit. Eum quam sed deserunt quibusdam molestiae laborum tempore doloremque nulla vel quod recusandae quas unde nesciunt, architecto ab totam expedita error qui adipisci quo dolorum itaque. Ad eveniet ipsam error sunt nemo itaque assumenda nulla quas sapiente tenetur ex, a quos maiores exercitationem aperiam? Explicabo eligendi omnis molestias pariatur veritatis accusantium earum asperiores incidunt assumenda ab doloribus quaerat beatae, aspernatur, fugiat nisi sapiente perferendis cupiditate voluptatibus veniam hic nobis? Aspernatur voluptates animi nobis cum a, quidem, atque laudantium vero harum quibusdam possimus eveniet neque maxime ab nihil omnis quia veniam alias! Aut dolores cupiditate minima alias neque eveniet, odio nostrum eaque saepe illo excepturi, pariatur quae obcaecati repellendus vel voluptate ducimus ut. Minima earum dolor voluptates perspiciatis, molestiae sed. Magni nihil hic accusantium enim! Esse possimus quod incidunt doloribus ipsum quis facere quae assumenda molestiae tempore est, reiciendis maiores repellendus! Magni mollitia nisi recusandae natus, et dignissimos excepturi iste qui provident magnam deserunt veritatis nihil numquam. Inventore quibusdam deserunt commodi aperiam praesentium saepe soluta odit placeat fugiat itaque! Voluptatibus laboriosam placeat consectetur necessitatibus eaque iure reprehenderit porro iste quod, odio maiores eum, inventore dolore veniam accusamus consequatur similique sapiente? Earum odio soluta quod officiis deleniti culpa. Voluptatum quis odio nesciunt hic officiis doloremque voluptates, sint unde voluptatibus corrupti explicabo dolorem enim inventore suscipit distinctio asperiores, est at tempora sed vero modi neque velit, perspiciatis commodi. Blanditiis laboriosam, voluptas ipsam eaque sit aut velit. Iusto omnis saepe ab nam velit ducimus totam exercitationem, beatae aut quo blanditiis delectus enim modi veritatis ullam laboriosam dolores architecto voluptates ratione accusantium adipisci? Nemo est distinctio consequuntur omnis deserunt eum, architecto molestiae velit quas eveniet adipisci quaerat tempora. Similique odio recusandae, facilis corrupti ad illum quis cupiditate dolores assumenda mollitia maiores dignissimos adipisci officia aliquid illo, officiis corporis suscipit? Nostrum asperiores, ratione nemo pariatur facilis atque aspernatur reprehenderit animi consequatur est veritatis ullam blanditiis ex dolore voluptatem dolorum aliquid ipsam sequi doloribus distinctio fuga nisi exercitationem, id doloremque. Omnis, corporis possimus culpa illo soluta quod libero impedit asperiores nisi labore atque hic quos odit et sunt ipsam totam. Est distinctio excepturi, numquam asperiores sequi dolorem ut voluptatem modi quae.</p>
+   </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+window.addEventListener('scroll',function(){
+   let navbar = document.getElementById('menu')
+   if(window.pageYOffset>=190){
+    navbar.classList.add('sticky');
+   }
+   else{
+      navbar.classList.remove('sticky');
+   }
+});
