@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background changer</title>
+    <style>
+     body{
+      margin: 0px;
+      padding: 20px 100px;
+     }
+     h1{
+      text-align: center;
+      text-decoration: underline;
+     }
+     img{
+      width: 100%;
+      height: 600px;
+      margin: 0 auto;
+     }
+     p{
+      font-size: 25px;
+      text-align: justify;
+     }
+     .btn{
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: solid grey;
+      border-radius: 50%;
+      cursor: pointer;
+
+     }
+     #white{
+    background-color: white;
+     }
+     #aqua{
+       background-color: aqua;
+     }
+     #violet{
+      background-color: blueviolet;
+     }
+     #black{
+      background-color: black;
+     }
+     #color{
+      text-align: right;
+     }
+    </style>
+</head>
+<body>
+   <div id="color">
+      <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+      <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+      <span class="btn" id="violet" onclick="changeBG('#ce9aff')"></span>
+      <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+   </div>
+  <h1 class="text">About us</h1>
+  <img src="https://imagevars.gulfnews.com/2016/4/24/1_16a082af9c6.1810284_786440863_16a082af9c6_large.jpg" alt="img">
+  <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti iste ab ea tempore temporibus animi eius iure nam? At, aspernatur accusamus? Tempora inventore voluptates dolorem, cum ullam asperiores sed officiis natus delectus quae, ab obcaecati, suscipit assumenda. Totam ipsum nesciunt expedita eaque quaerat magni recusandae nostrum facere placeat non ad tempora veritatis culpa fuga voluptatem, reprehenderit quod quae? Sapiente minima, repellendus suscipit perferendis similique veniam vel libero voluptatum, quibusdam dolor expedita, obcaecati odio quisquam inventore cumque natus perspiciatis! Perspiciatis modi ad assumenda, praesentium nesciunt dolores. Incidunt, atque rem dignissimos eaque necessitatibus molestiae nulla recusandae doloribus ratione? Obcaecati fugiat voluptates blanditiis?
+  </p>
+   
+    <script src="script.js"></script>
+</body>
+
+</html>
+------js-----
+
+function changeBG(color){
+   document.body.style.backgroundColor = color;
+  let txt = document.getElementsByClassName('text');
+   if(color == "#000000"){
+      for(let elm of txt){
+         elm.style.color = "white";
+      }
+   }
+   else{
+      for(let elm of txt){
+         elm.style.color = "black";
+      }
+   }
+}
